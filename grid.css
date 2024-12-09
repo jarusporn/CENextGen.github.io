@@ -1,0 +1,13 @@
+.container {
+    background-color: white;
+    grid-template-columns: ;
+}
+
+.item-A {
+    background-color: red;
+    color: white;
+}
+
+.item-B {
+    background-color: blue;
+}

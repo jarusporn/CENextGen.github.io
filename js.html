@@ -1,0 +1,54 @@
+<html>
+    <head>
+    </head>
+    <body>
+       <div id="test1">test</div>
+
+        <script>
+            const arr = [1, 2, 3, "Hello CE NextGen, true, false"]
+            
+            const container1 = document.getElementById("element1");
+            // el.innerText = "hi"
+            
+            function createlist() {
+                const container1 = document.getElementById("element1");
+
+                const ul_el = document.createElement("ul");
+                container1.appendChild(ul_el);
+    
+                for (const itrrm of arr) {
+                    const li_el = document.createElement("li");
+                    li_el.interText = itrrm
+                    ul_el.appendChild(li_el)
+                }           
+            
+            const el = document.getElementById("test1");
+            console.log(el)
+            console.log(document.getElementById("test1").innerText)
+            el.innerText = "hi"
+            console.log(el.innerText)
+
+            const new_el = document.createElement("div");
+            new_el.innerText = "CE NextGen";
+            console.log(new_el);
+            el.appendChild(new_el);
+
+            const myButton = document.getElementById("myButton");
+            let state = 0
+            myButton.addEventListener("click", function(){
+                if (state == 0) {
+                    ul_el.style.background = "pink";
+                    createlist()
+
+                    state++;
+                }
+                else {
+                    ul_el.style.background = "green";
+                    state = true;
+                }
+            })
+            ul_el.style.background = "green"
+            
+        </script>
+    </body>
+</html>
