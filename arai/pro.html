@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><button id="home-btn" class="navbar">Home</button></li>
+                <li><button id="about-btn" class="navbar">About Me</button></li>
+                <li><button id="contact-btn" class="navbar">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="home-content" class="container-item">
+            <h2>Home</h2>
+            <p>Welcome to my portfolio!</p>
+            <p>My name is Jarusporn Sooksapsri. You can call me Aonn dai loei kub bro.</p>
+            <p>Studying in Grade 11 at Princess Chulabhorn Science High Schook Lopburi</p>
+            <img src="https://t4.ftcdn.net/jpg/06/01/29/15/240_F_601291576_9vcyvR9S6YtTQjHLXsSQT25ziNUgR9Ec.jpg" alt="women">
+            
+            <div class="flexbox-container">
+                <div id="about-content" class="flexbox-item">
+                    <h3>About Me</h3>
+                    <p>Favorite foods: Chocolate, Milk, Noodles</p>
+                    <p>Subjects: Mathematics, Engineering Design</p>
+                    <p>Hobbies: Building Lego, Playing Sports, Watching Series</p>
+                </div>
+
+                <div id="contact-content" class="flexbox-item">
+                    <h3>Contact</h3>
+                    <p>Tel: 095-942-1002</p>
+                    <p>Email: jarusporn.so@gmail.com</p>
+                    <p>IG: js_aonn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const homeBtn = document.getElementById("home-btn");
+        const aboutBtn = document.getElementById("about-btn");
+        const contactBtn = document.getElementById("contact-btn");
+
+        const homeContent = document.getElementById("home-content");
+        const aboutContent = document.getElementById("about-content");
+        const contactContent = document.getElementById("contact-content");
+
+        function showHome() {
+            homeContent.style.display = "block";
+        }
+
+        function showSection(section) {
+            homeContent.style.display = "none";
+            section.style.display = "block";
+        }
+
+        homeBtn.addEventListener("click", showHome);
+        aboutBtn.addEventListener("click", () => showSection(aboutContent));
+        contactBtn.addEventListener("click", () => showSection(contactContent));
+
+        showHome();
+    </script>
+</body>
+</html>

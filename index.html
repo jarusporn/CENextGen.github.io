@@ -4,23 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type = "text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="navbar">
-        <div class="nextgen">NEXT GEN</div>
-        <div class="number">
-            <div class="numberitem">1</div>
-            <div class="numberitem">2</div>
-            <div class="numberitem">3</div>
+    <div class="hua">
+        <h1 class="ourR">OUR RESUME</h1>
+    </div>
+    <div class="bigcontainer">
+        <div class="container">
+            <div><a href="assignment/portfolio/index.html" id ="link1"><img src="monkey.jpg" id="image1" alt=""></a></div>
+            <div></div>
+        </div>
+        <div class="container">
+            <div><a href="arai/pro.html" id ="link1"><img src="bike.jpg" id="image2" alt=""></a></div>
+            <div></div>
         </div>
     </div>
-    <div>
-        <div class="number-container">
-            <div class="number.item">1</div>
-            <div class="number.item">2</div>
+    <div class="botcontainer">
+        <div class="bot1">Contact us</div>
+        <div class="bot1-1">IG: Peamm.Taspawee(พีม) js_aonn(อ้อน)</div>
+        <div class="bot1-1">FB:????????????????</div>
     </div>
+    <script>
+        document.getElementById("image1").addEventListener("mouseover","click", function() {
+            if (event.type =="mouseover"){
+                
+            }
+            document.getElementById("link1").click();  // Trigger the click on the <a> tag
+        });
+        document.getElementById("image2").addEventListener("click", function() {
+            document.getElementById("link1").click();  // Trigger the click on the <a> tag
+        });
+    </script>
+<style>
+    @media screen and (max-width:720px) and (min-width:0px) {
+        body{
+            background-image: url("/assignment/project/asda\ -\ Copy.jpg");
+            margin: 0;
+            position: relative;
+            background-size:cover;
+            background-size: 100vh;
+            background-size: 100vw;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            overflow: hidden;
+        }
+        .ourR{
+            position: sticky;
+            text-align: center;
+            font-size: 14vh;
+            font-size: 14vw;    
+            margin-top: 0;
+            height: 14vh;
+           
+            }
+        .hua{
+            position: sticky;
+            z-index: 50;
+            top:0;
+            }
+        .bigcontainer{
+            display: flex;
+            justify-content: center;
+            }
+        .container{
+            position: relative;
+            display: flex;  
+            margin: 5vw;
+            height: 50vh;
+            width: 40vw;
+            }
+        #image1,#image2{
+            width: 100%;
+            height: 100%;
+            }
+        .botcontainer {
+            position: absolute;
+            bottom: 0;
+            background-color: #f1f1f1;
+            padding: 20px;
+            width: 100vw;
+            height: 10vh;
+        }
+        .bot1{
+            font-size: 24px;
+        }
+    }
+</style>
 </body>
-</body>  
 </html>
