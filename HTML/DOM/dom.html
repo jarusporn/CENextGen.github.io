@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container1">eieiei</div>
+    <button id ="button">CliCK</button>
+    <button id ="button1">CliCK</button>
+    <script>
+        const arr = [1,2,3,"CE",true,false];
+        const container = document.getElementById("container1");
+        
+        const ul_nd = document.createElement("ul");
+        container.appendChild(ul_nd);
+        for (item of arr){
+            const li_nd =document.createElement("li");
+            li_nd.innerText = item;
+            ul_nd.appendChild(li_nd);
+        }
+        ul_nd.style.backgroundColor= "aqua";
+        let button_state = true;
+        /*const mybutton = document.getElementById("button");
+        mybutton.addEventListener("click",function(){
+            if (button_state == true){
+                ul_nd.style.backgroundColor= "pink";
+                button_state = false;
+            }else{
+                ul_nd.style.backgroundColor= "aqua";
+                button_state = true;
+            }
+            }
+        );*/
+        const mybutton = document.getElementById("button");
+        mybutton.addEventListener("mouseover",function(){
+            if (button_state == true){
+                ul_nd.style.backgroundColor= "pink";
+                button_state = false;
+            }else{
+                ul_nd.style.backgroundColor= "aqua";
+                button_state = true;
+            }
+            }
+        );
+        const mybutton1 = document.getElementById("button1");
+        mybutton.addEventListener("click",function(){
+            if (button_state == true){
+                ul_nd.style.backgroundColor= "pink";
+                button_state = false;
+            }else{
+                ul_nd.style.backgroundColor= "aqua";
+                button_state = true;
+            }
+            }
+        );
+    </script>
+</body>
+</html>

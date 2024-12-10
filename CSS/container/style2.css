@@ -1,0 +1,15 @@
+.itemcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid blue;
+    margin: 2px;
+    align-items:end;
+    flex-direction: row;
+    justify-content: end;
+}
+.itemflex{
+    margin: 10px;
+    background-color: blue;
+    height: 40px;
+    width: 50px
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/assignment/gridresponsive/style.css">
+</head>
+<body>
+    <div class="griddy">
+        <div class="top">NEXTGEN</div>
+        <div class="grid">
+            <div class="item1">Box 1</div>
+            <div class="item2">Box 2</div>
+        </div>
+    </div>
+</body>
+<style>
+    @media screen and (max-width:720px) and (min-width:0px) {
+    .griddy{
+        display: grid;
+
+        grid-template-columns: auto;
+        grid-template-rows: 20px auto ;
+    }
+    .top{
+        background-color: black;
+        color: white;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto ;
+        border: 1px solid black;
+        justify-content: stretch;
+    }
+    .item1{
+        background-color: red;
+        width: 100%;
+        
+    }
+    .item2{
+        background-color: blue;
+        width: 100%;
+    }
+}
+</style>
+</html>

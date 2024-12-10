@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = eiei></div>
+    <button id="mybutton">Click</button>
+    <script>
+        const mybutton = document.getElementById("mybutton")
+        let button_state = 0
+        mybutton.addEventListener("click",function(){
+            button_state =button_state+1;
+            const eiei = document.getElementById("eiei")
+            function jubu(arr,ul){
+                for (let x of arr){
+                    const li = document.createElement("li");
+                    li.innerText = x;
+                    ul.appendChild(li);
+
+                }
+            }
+            if (button_state == 1) {
+                const foods = ["ขาหมู", "บะหมี่แห้ง"];
+                const subjects = ["computer", "PE", "Mathematics"];
+                const hobbies = ["เล่นเกม", "เตะบอล"];
+
+                
+                const new_eiei = document.createElement("h1");
+                new_eiei.innerText = "Taspawee";
+                eiei.appendChild(new_eiei);
+
+                
+                const foodList = document.createElement("ul");
+                eiei.appendChild(foodList);
+                jubu(foods, foodList);
+
+                const subjectsList = document.createElement("ul");
+                eiei.appendChild(subjectsList);
+                jubu(subjects, subjectsList);
+
+                const hobbiesList = document.createElement("ul");
+                eiei.appendChild(hobbiesList);
+                jubu(hobbies, hobbiesList);
+            }
+            else if(button_state > 1){
+                const labubu = document.getElementsByTagName("li")
+                const color = ["red","yellow","green"]
+                for(let i =0;i<labubu.length;i++){
+                    labubu[i].style.backgroundColor=color[i % color.length];
+                    }
+                mybutton.remove();
+                }
+            }
+    )
+    </script>
+</body>
+</html>
